@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AWS Orchestrator</class>
+ <widget class="QMainWindow" name="AWSOrchestrator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AWS Orchestrator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="EC2">
+     <attribute name="title">
+      <string>EC2</string>
+     </attribute>
+     <widget class="QListWidget" name="listInstances">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>201</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startInstance">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>450</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="getStatus">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>450</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show Status</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="stopInstance">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>450</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Stop Instance</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="getInstances">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>220</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>List Instances</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nameInstance">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="types">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>360</y>
+        <width>111</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>68</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>280</y>
+        <width>68</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Region:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>111</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Instance type:</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="status">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>351</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ec2regions">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>300</y>
+        <width>211</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="createInstance">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>350</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Create Instance</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="S3">
+     <attribute name="title">
+      <string>S3</string>
+     </attribute>
+     <widget class="QListWidget" name="createdBuckets">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>261</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="bucketName">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>261</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>261</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Bucket name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>261</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Region:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="createBucket">
+      <property name="geometry">
+       <rect>
+        <x>141</x>
+        <y>150</y>
+        <width>141</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Create new Bucket</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="result">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showallBucket">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>450</y>
+        <width>171</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>List all buckets</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteBucket">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>150</y>
+        <width>131</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete a bucket</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="chooseFile">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>80</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select a File</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="fileName">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>40</y>
+        <width>341</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="uploadFile">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>130</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Upload a File</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>80</y>
+        <width>221</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="resultUpload">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>110</y>
+        <width>211</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>210</y>
+        <width>341</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="downloadFile">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>240</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Download a File</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="s3regions">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>261</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
